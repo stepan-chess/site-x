@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Кто есть кто | КВАРДОРОМАТ</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"  rel="stylesheet">
     <style>
         :root {
             --main-color: #6a11cb;
@@ -35,9 +35,13 @@
             transform: translateY(-5px);
             box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         }
-        .avatar {
-            font-size: 3rem;
-            margin-bottom: 15px;
+        .avatar-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            margin: 0 auto 15px;
         }
         .photo-of-day {
             border: 5px solid white;
@@ -56,41 +60,21 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    
-        <li class="nav-item">
-            <a class="nav-link active" href="index.html">
-                👥 Кто есть кто
-            </a>
-        </li>
-        
-
-        <li class="nav-item">
-            <a class="nav-link " href="news.html">
-                📰 Новости
-            </a>
-        </li>
-        
-
-        <li class="nav-item">
-            <a class="nav-link " href="interviews.html">
-                🎙️ Интервью
-            </a>
-        </li>
-        
-
-        <li class="nav-item">
-            <a class="nav-link " href="creativity.html">
-                🎨 Творчество
-            </a>
-        </li>
-        
-
-        <li class="nav-item">
-            <a class="nav-link " href="photo.html">
-                📸 Фото дня
-            </a>
-        </li>
-        
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">👥 Кто есть кто</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">📰 Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="interviews.html">🎙️ Интервью</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="creativity.html">🎨 Творчество</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="photo.html">📸 Фото дня</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -98,49 +82,52 @@
 
     <!-- Основной контент -->
     <div class="container my-5">
-        
-        <h1 class="text-center mb-5">👥 Наша компания</h1>
+        <h1 class="text-center mb-5">👥 Кто есть кто</h1>
         <div class="row">
-            
+
             <div class="col-md-6 col-lg-3 mb-4">
                 <div class="friend-card card text-center p-4 h-100">
-                    <div class="avatar">👨‍💻</div>
-                    <h3>Артём</h3>
-                    <h5 class="text-muted">Мемолог</h5>
-                    <p>Создатель самых вирусных мемов в компании</p>
+                    <img src="images/avatar-egor.png" alt="Фото Егора" class="avatar-img">
+                    <h3>Егор</h3>
+                    <h5 class="text-muted">Питерский поэт-алкоголик</h5>
+                    <p>Пьет и пишет, пишет и пьет. Иногда - просто пьет и не пишет</p>
                 </div>
             </div>
-            
+
             <div class="col-md-6 col-lg-3 mb-4">
                 <div class="friend-card card text-center p-4 h-100">
-                    <div class="avatar">👩‍🎨</div>
-                    <h3>Лиза</h3>
-                    <h5 class="text-muted">Художник</h5>
-                    <p>Рисует карикатуры на всех друзей</p>
+                    <img src="images/avatar-bagr.png" alt="Фото Григория" class="avatar-img">
+                    <h3>Григорий</h3>
+                    <h5 class="text-muted">Группа из Омска "Восстановительная Сила"</h5>
+                    <p>Автор более сотни песен-хитов</p>
                 </div>
             </div>
-            
+
             <div class="col-md-6 col-lg-3 mb-4">
                 <div class="friend-card card text-center p-4 h-100">
-                    <div class="avatar">📷</div>
-                    <h3>Макс</h3>
-                    <h5 class="text-muted">Фотограф</h5>
-                    <p>Ловит лучшие моменты на камеру</p>
+                    <img src="images/avatar-kub.png" alt="Фото Куба" class="avatar-img">
+                    <h3>Куб</h3>
+                    <h5 class="text-muted">ДиДжей-музыкант, г. Омск</h5>
+                    <p>Создатель танцевальных шедевров</p>
                 </div>
             </div>
-            
+
             <div class="col-md-6 col-lg-3 mb-4">
                 <div class="friend-card card text-center p-4 h-100">
-                    <div class="avatar">🧐</div>
-                    <h3>Саша</h3>
-                    <h5 class="text-muted">Историк</h5>
-                    <p>Помнит все смешные случаи за последние 5 лет</p>
+                    <img src="images/avatar-stepan.png" alt="Фото Степана" class="avatar-img">
+                    <h3>Степан</h3>
+                    <h5 class="text-muted">Проект "Кофр Иуды", Омск-Мончегорск</h5>
+                    <p>Тоже пишет песни</p>
                 </div>
             </div>
-            
+
+
+
         </div>
-        
     </div>
+
+
+
 
     <!-- Подвал -->
     <footer class="bg-dark text-white text-center py-4 mt-5">
@@ -150,6 +137,6 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
 </body>
 </html>
