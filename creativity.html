@@ -44,6 +44,28 @@
             box-shadow: 0 0 20px rgba(0,0,0,0.2);
             max-height: 500px;
         }
+ /* Стиль для ссылки */
+        .theme-switch-box {
+            text-align: right;
+            margin-top: -20px;
+            margin-bottom: 30px;
+        }
+
+        .theme-switch-box a {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .theme-switch-box a:hover {
+            background-color: #ff4d7d;
+        }
+
     </style>
 </head>
 <body>
@@ -95,6 +117,16 @@
             </div>
         </div>
     </nav>
+
+
+<!-- Плашка со ссылкой -->
+    <div class="container">
+        <div class="theme-switch-box">
+            <a href="dark/creativity.html">Перейти на темную тему</a>
+        </div>
+    </div>
+
+
 
     <!-- Основной контент -->
     <div class="container my-5">
