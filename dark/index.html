@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кто есть кто | КВАРДОРОМАТ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"  rel="stylesheet">
+    <style>
+    :root {
+        --header-bg: #000000;       /* Чёрная шапка */
+        --text-color: #ffffff;      /* Белый текст */
+        --card-bg: rgba(26, 26, 26, 0.9); /* Полупрозрачный фон карточек */
+        --shadow-color: rgba(255, 255, 255, 0.1);
+        --border-color: #333333;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--text-color);
+        background-image: url('images/fon4.jpg'); /* Путь к фоновому изображению */
+        background-repeat: repeat;        /* Картинка будет повторяться по всему фону */
+        background-attachment: scroll;    /* Фон прокручивается вместе с контентом */
+        min-height: 100vh;
+    }
+
+    .navbar {
+        background-color: var(--header-bg);
+        box-shadow: 0 4px 12px var(--shadow-color);
+    }
+
+    .navbar-brand {
+        font-weight: 800;
+        font-size: 1.8rem;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        color: var(--text-color) !important;
+    }
+
+    .nav-link {
+        color: var(--text-color) !important;
+    }
+
+    h1, h2, h3, h4, h5, p, .text-muted {
+        color: var(--text-color) !important;
+    }
+
+    .friend-card {
+        background-color: var(--card-bg);
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px var(--shadow-color);
+        transition: transform 0.3s ease;
+        border: 1px solid var(--border-color);
+    }
+
+    .friend-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px var(--shadow-color);
+    }
+
+    .avatar-img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px var(--shadow-color);
+        margin: 0 auto 15px;
+        border: 2px solid var(--text-color);
+    }
+
+    .photo-of-day {
+        border: 5px solid var(--text-color);
+        box-shadow: 0 0 20px var(--shadow-color);
+        max-height: 500px;
+    }
+
+    footer {
+        background-color: var(--header-bg);
+        color: var(--text-color);
+        border-top: 1px solid var(--border-color);
+    }
+</style>
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">КВАРДОРОМАТ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">👥 Кто есть кто</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">📰 Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="interviews.html">🎙️ Интервью</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="creativity.html">🎨 Творчество</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="photo.html">📸 Фото дня</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <div class="container my-5">
+        <h1 class="text-center mb-5">👥 Кто есть кто</h1>
+        <div class="row">
+
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="friend-card card text-center p-4 h-100">
+                    <img src="images/avatar-egor.png" alt="Фото Егора" class="avatar-img">
+                    <h3>Егор</h3>
+                    <h5 class="text-muted">Питерский поэт-алкоголик</h5>
+                    <p>Пьет и пишет, пишет и пьет. Иногда - просто пьет и не пишет</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="friend-card card text-center p-4 h-100">
+                    <img src="images/avatar-bagr.png" alt="Фото Григория" class="avatar-img">
+                    <h3>Григорий</h3>
+                    <h5 class="text-muted">Группа из Омска "Восстановительная Сила"</h5>
+                    <p>Автор более сотни песен-хитов</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="friend-card card text-center p-4 h-100">
+                    <img src="images/avatar-kub.png" alt="Фото Куба" class="avatar-img">
+                    <h3>Куб</h3>
+                    <h5 class="text-muted">ДиДжей-музыкант, г. Омск</h5>
+                    <p>Создатель танцевальных шедевров</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="friend-card card text-center p-4 h-100">
+                    <img src="images/avatar-stepan.png" alt="Фото Степана" class="avatar-img">
+                    <h3>Степан</h3>
+                    <h5 class="text-muted">Проект "Кофр Иуды", Омск-Мончегорск</h5>
+                    <p>Тоже пишет песни</p>
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="friend-card card text-center p-4 h-100">
+                    <img src="images/avatar-yulia.png" alt="Фото Юли" class="avatar-img">
+                    <h3>Юля</h3>
+                    <h5 class="text-muted">Ученый-патепатик</h5>
+                    <p>Знает КОДЫ и учит людей математике</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="friend-card card text-center p-4 h-100">
+                    <img src="images/avatar-maria-stolpovskih.png" alt="Фото Марии Столповских" class="avatar-img">
+                    <h3>Мария Столповских</h3>
+                    <h5 class="text-muted">Актриса и художница из города Металлострой под Питером</h5>
+                    <p>по совместительству ещё и поэтесса</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="friend-card card text-center p-4 h-100">
+                    <img src="images/avatar-kostya.png" alt="Фото Марии Столповских" class="avatar-img">
+                    <h3>Костя</h3>
+                    <h5 class="text-muted">Поэт и музыкант из Питера</h5>
+                    <p>из принципиальных и любопытных</p>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+    <!-- Подвал -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p>© 2025 КВАРДОРОМАТ. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
+</body>
+</html>
