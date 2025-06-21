@@ -151,6 +151,27 @@
 
     </div>
 
+
+   <?php
+$counterFile = 'counter.json';
+
+// Читаем или создаем JSON
+$data = file_exists($counterFile) ? json_decode(file_get_contents($counterFile), true) : ['visitors' => 0];
+
+// Увеличиваем счетчик
+$data['visitors']++;
+
+// Сохраняем
+file_put_contents($counterFile, json_encode($data));
+
+// Выводим
+echo "Посетителей: " . $data['visitors'];
+?>
+
+
+
+   
+
     <!-- Подвал -->
     <footer class="bg-dark text-white text-center py-4 mt-5">
         <div class="container">
