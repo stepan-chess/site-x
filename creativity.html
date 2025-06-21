@@ -152,8 +152,8 @@
     </div>
 
 
-   <?php
-$counterFile = 'counter.json';
+<?php
+$counterFile = __DIR__ . '/counter.json';
 
 // Читаем или создаем JSON
 $data = file_exists($counterFile) ? json_decode(file_get_contents($counterFile), true) : ['visitors' => 0];
@@ -161,7 +161,7 @@ $data = file_exists($counterFile) ? json_decode(file_get_contents($counterFile),
 // Увеличиваем счетчик
 $data['visitors']++;
 
-// Сохраняем
+// Сохраняем (файл создастся сам)
 file_put_contents($counterFile, json_encode($data));
 
 // Выводим
