@@ -150,67 +150,6 @@
     
 
     </div>
-
-
-
-
-
-
-   <?php
-// Настройки
-$counterFile = __DIR__ . '/counter.json';
-$ip = $_SERVER['REMOTE_ADDR']; // Получаем IP пользователя
-$currentTime = date('Y-m-d H:i:s'); // Текущая дата и время
-
-// Если файла нет — создаем структуру
-if (!file_exists($counterFile)) {
-    $initialData = [
-        'total_visits' => 0,
-        'unique_visitors' => [],
-    ];
-    file_put_contents($counterFile, json_encode($initialData));
-}
-
-// Читаем данные
-$data = json_decode(file_get_contents($counterFile), true);
-
-// Увеличиваем общее число визитов
-$data['total_visits']++;
-
-// Если IP новый — добавляем в уникальные посетители
-if (!isset($data['unique_visitors'][$ip])) {
-    $data['unique_visitors'][$ip] = [
-        'first_visit' => $currentTime,
-        'last_visit' => $currentTime,
-        'visit_count' => 1,
-    ];
-} else {
-    // Обновляем данные по существующему IP
-    $data['unique_visitors'][$ip]['last_visit'] = $currentTime;
-    $data['unique_visitors'][$ip]['visit_count']++;
-}
-
-// Сохраняем данные
-file_put_contents($counterFile, json_encode($data, JSON_PRETTY_PRINT));
-
-// Выводим статистику
-echo "Общее число посещений: " . $data['total_visits'] . "<br>";
-echo "Уникальных посетителей: " . count($data['unique_visitors']) . "<br>";
-
-// Можно вывести детали по текущему пользователю
-if (isset($data['unique_visitors'][$ip])) {
-    $user = $data['unique_visitors'][$ip];
-    echo "Ваш первый визит: " . $user['first_visit'] . "<br>";
-    echo "Ваш последний визит: " . $user['last_visit'] . "<br>";
-    echo "Число ваших визитов: " . $user['visit_count'] . "<br>";
-}
-?>
-
-
-   
-
-
-
    
 
     <!-- Подвал -->
